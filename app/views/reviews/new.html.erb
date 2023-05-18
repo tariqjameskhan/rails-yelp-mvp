@@ -1,0 +1,18 @@
+
+
+<div class="container">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10 col-sm-6">
+        <h1 class="border-bottom p-3">Add <strong>your</strong> review</h1>
+        <%= simple_form_for [@restaurant, @review] do |f| %>
+        <%= f.input :content %>
+        <%= f.submit "Submit review", class: "btn btn-primary" %>
+        <% end %>
+        <div>
+          <p class="btn btn-primary mt-5"><%= link_to "Back to restaurants", restaurants_path, class: "text-white"%></p>
+        </div>
+      </div>
+    </div >
+  </div>
+</div>

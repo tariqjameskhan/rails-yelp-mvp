@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-10 col-sm-6 bg-primary-light border-bottom">
+      <div>
+        <h1 class="p3 mt-4"><%= @restaurant.name %></h1>
+      </div>
+      <div>
+        <h3 class="p3 mt-4"><%= @restaurant.address %></h3>
+      </div>
+      <div>
+        <h3 class="p3 mt-4"><%= @restaurant.category %></h3>
+      </div>
+      <% @restaurant.reviews.each do |review| %>
+          <div class="border-bottom bg-light p-2">
+            <h3><%= review.rating %></h3>
+            <p><%= review.content%></p>
+          </div>
+        <% end %>
+      <div>
+        <p class="btn btn-primary mt-5"><%= link_to "Back to restaurants", restaurants_path, class: "text-white"%></p>
+      </div>
+      <div>
+        <p class="btn btn-primary mt-5"><%= link_to "Add a Review", new_restaurant_review_path(@restaurant), class: "text-white"%></p>
+      </div>
+    </div>
+  </div >
+</div>

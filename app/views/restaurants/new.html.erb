@@ -1,0 +1,21 @@
+
+
+<div class="container">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10 col-sm-6">
+        <h1 class="border-bottom p-3">Add <strong>your</strong> restaurant</h1>
+        <%= simple_form_for(@restaurant) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :category %>
+        <%= f.input :phone_number %>
+        <%= f.submit %>
+         <% end %>
+        <div>
+          <p class="btn btn-primary mt-5"><%= link_to "Back to restaurants", restaurants_path, class: "text-white"%></p>
+        </div>
+      </div>
+    </div >
+  </div>
+</div>
